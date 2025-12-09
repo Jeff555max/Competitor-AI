@@ -103,13 +103,13 @@ Competitor-AI/
 │   ├── requirements.txt      # (пустой) — зависимости теперь в корне
 │   ├── venv/                 # Виртуальное окружение desktop
 │   └── dist/
-│       └── build.exe         # Собранный .exe-файл для Windows
-├── main.py                   # Точка входа FastAPI 
-├── build.py                  # Исходный код desktop GUI 
+├── main.py                   # Точка входа FastAPI
 ├── requirements.txt          # Все зависимости проекта
 ├── env.example.txt           # Пример .env
 ├── .env                      # Ваши переменные окружения
 ├── history.json              # История запросов (автоматически)
+├── build.exe                 # Собранный .exe-файл для Windows
+├── competition_monitor.exe   # Альтернативный .exe (если есть)
 ├── README.md                 # Документация
 ```
 
