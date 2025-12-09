@@ -71,7 +71,7 @@ OPENAI_VISION_MODEL=gpt-4o
 ### 3. Запуск приложения
 
 ```powershell
-python -m uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000
+python main.py
 ```
 
 Приложение будет доступно по адресу: http://localhost:8000
