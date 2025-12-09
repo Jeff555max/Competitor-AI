@@ -100,16 +100,21 @@ Competitor-AI/
 │   ├── styles.css            # Стили
 │   └── app.js                # JS логика
 ├── desktop/                  # Desktop-приложение (PyQt6)
+│   ├── build.py              # Исходный код desktop GUI
+│   ├── build.spec            # Спецификация сборки PyInstaller
 │   ├── requirements.txt      # (пустой) — зависимости теперь в корне
 │   ├── venv/                 # Виртуальное окружение desktop
-│   └── dist/
+│   ├── build/
+│   │   └── build/            # Временные файлы сборки PyInstaller
+│   └── dist/                 # (пусто или временные файлы)
+├── dist/
+│   └── competition_monitor.exe   # Альтернативный .exe (если есть)
 ├── main.py                   # Точка входа FastAPI
 ├── requirements.txt          # Все зависимости проекта
 ├── env.example.txt           # Пример .env
 ├── .env                      # Ваши переменные окружения
 ├── history.json              # История запросов (автоматически)
 ├── build.exe                 # Собранный .exe-файл для Windows
-├── competition_monitor.exe   # Альтернативный .exe (если есть)
 ├── README.md                 # Документация
 ```
 
