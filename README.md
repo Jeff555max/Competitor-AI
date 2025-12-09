@@ -78,7 +78,6 @@ python -m uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000
 ```
 Competitor-AI/
 ├── backend/                  # Серверная логика (FastAPI)
-│   ├── main.py               # Точка входа FastAPI
 │   ├── config.py             # Конфигурация
 │   ├── models/
 │   │   └── schemas.py        # Pydantic модели
@@ -91,12 +90,13 @@ Competitor-AI/
 │   ├── styles.css            # Стили
 │   └── app.js                # JS логика
 ├── desktop/                  # Desktop-приложение (PyQt6)
-│   ├── build.py              # Исходный код desktop GUI
-│   ├── requirements.txt      # Зависимости desktop-версии
+│   ├── requirements.txt      # (пустой) — зависимости теперь в корне
 │   ├── venv/                 # Виртуальное окружение desktop
 │   └── dist/
 │       └── build.exe         # Собранный .exe-файл для Windows
-├── requirements.txt          # Зависимости backend/web
+├── main.py                   # Точка входа FastAPI (теперь в корне)
+├── build.py                  # Исходный код desktop GUI (теперь в корне)
+├── requirements.txt          # Все зависимости проекта
 ├── env.example.txt           # Пример .env
 ├── .env                      # Ваши переменные окружения
 ├── history.json              # История запросов (автоматически)
