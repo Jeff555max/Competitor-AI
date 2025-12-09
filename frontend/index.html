@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мониторинг конкурентов — AI Ассистент</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="app">
+        <header>
+            <h1>Мониторинг конкурентов</h1>
+            <p>Мультимодальный AI ассистент: анализ текста и изображений</p>
+        </header>
+        <main>
+            <section class="card">
+                <h2>Анализ текста</h2>
+                <form id="text-form">
+                    <textarea id="text-input" placeholder="Вставьте текст конкурента..." minlength="10" required></textarea>
+                    <button type="submit">Проанализировать текст</button>
+                </form>
+                <div id="text-result"></div>
+            </section>
+            <section class="card">
+                <h2>Анализ изображения</h2>
+                <form id="image-form" enctype="multipart/form-data">
+                    <input type="file" id="image-input" accept="image/*" required>
+                    <button type="submit">Проанализировать изображение</button>
+                </form>
+                <div id="image-result"></div>
+            </section>
+            <section class="card">
+                <h2>Парсинг сайта</h2>
+                <form id="parse-form">
+                    <input type="text" id="url-input" placeholder="https://site.com" required>
+                    <button type="submit">Парсить и анализировать</button>
+                </form>
+                <div id="parse-result"></div>
+            </section>
+            <section class="card">
+                <h2>История запросов</h2>
+                <button id="refresh-history">Обновить историю</button>
+                <button id="clear-history">Очистить историю</button>
+                <div id="history-list"></div>
+            </section>
+        </main>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>
