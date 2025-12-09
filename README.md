@@ -23,6 +23,7 @@ MVP приложение для анализа конкурентной сред
 Desktop-версия полностью повторяет функционал веб-приложения, работает без браузера и дополнительных Python-зависимостей (только .exe).
 
 1. Соберите .exe файл (один раз):
+
    - Создайте виртуальное окружение для desktop:
      ```powershell
      cd desktop
@@ -30,6 +31,9 @@ Desktop-версия полностью повторяет функционал 
      .\venv\Scripts\activate
      pip install pyinstaller
      cd ..
+     ```
+   - Соберите .exe из корня проекта:
+     ```powershell
      pyinstaller --onefile --noconsole build.py
      ```
    - После сборки .exe появится в папке `dist/build.exe` (в корне проекта)
@@ -71,7 +75,7 @@ OPENAI_VISION_MODEL=gpt-4o
 ### 3. Запуск приложения
 
 ```powershell
-python main.py
+python -m uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
 Приложение будет доступно по адресу: http://localhost:8000
