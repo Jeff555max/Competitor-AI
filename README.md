@@ -30,17 +30,20 @@ Desktop-версия полностью повторяет функционал 
      python -m venv venv
      .\venv\Scripts\activate
      pip install pyinstaller
+     ```
+   - Выйдите в корень проекта:
+     ```powershell
      cd ..
      ```
-   - Соберите .exe из корня проекта:
+   - Соберите .exe из desktop/build.py, чтобы итоговый build.exe появился в корне проекта:
      ```powershell
-     pyinstaller --onefile --noconsole build.py
+     pyinstaller --onefile --noconsole --distpath . desktop/build.py
      ```
-   - После сборки .exe появится в папке `dist/build.exe` (в корне проекта)
+   - После сборки .exe исполняемый файл будет находиться в корне проекта: `build.exe`
 
 2. Для запуска:
-   - Откройте `dist/build.exe` двойным кликом.
-   - Приложение работает локально и подключается к backend (FastAPI).
+  - Откройте `build.exe` в корне проекта двойным кликом.
+  - Приложение работает локально и подключается к backend (FastAPI).
 
 **Важно:** Перед запуском desktop-приложения убедитесь, что backend (FastAPI) запущен!
 
