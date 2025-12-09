@@ -94,8 +94,8 @@ Competitor-AI/
 │   ├── venv/                 # Виртуальное окружение desktop
 │   └── dist/
 │       └── build.exe         # Собранный .exe-файл для Windows
-├── main.py                   # Точка входа FastAPI (теперь в корне)
-├── build.py                  # Исходный код desktop GUI (теперь в корне)
+├── main.py                   # Точка входа FastAPI 
+├── build.py                  # Исходный код desktop GUI 
 ├── requirements.txt          # Все зависимости проекта
 ├── env.example.txt           # Пример .env
 ├── .env                      # Ваши переменные окружения
