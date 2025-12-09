@@ -122,7 +122,7 @@ async def clear_history():
     """
     Очищает историю запросов.
     """
-    # ...реализация...
+    history_service.clear_history()
     return {"success": True, "message": "История очищена"}
 
 @app.get("/health")
