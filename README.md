@@ -1,6 +1,6 @@
 # 🔍 Мониторинг конкурентов — AI Ассистент
 
-MVP приложение для анализа конкурентной среды с поддержкой мультимодальности (текст,изображения, парсинг сайта).
+MVP приложение для анализа конкурентной среды с поддержкой мультимодальности (текст,изображения,парсинг сайта).
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-green.svg)
@@ -77,24 +77,30 @@ python -m uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000
 
 ```
 Competitor-AI/
-├── backend/
-│   ├── main.py              # FastAPI приложение
-│   ├── config.py            # Конфигурация
+├── backend/                  # Серверная логика (FastAPI)
+│   ├── main.py               # Точка входа FastAPI
+│   ├── config.py             # Конфигурация
 │   ├── models/
-│   │   └── schemas.py       # Pydantic модели
+│   │   └── schemas.py        # Pydantic модели
 │   └── services/
-│       ├── openai_service.py    # Работа с OpenAI API
-│       ├── parser_service.py    # Парсинг веб-страниц (Selenium)
-│       └── history_service.py   # Управление историей
-├── frontend/
-│   ├── index.html           # HTML страница
-│   ├── styles.css           # Стили
-│   └── app.js               # JavaScript логика
-├── requirements.txt         # Зависимости Python
-├── env.example.txt          # Пример .env файла
-├── .env                     # Ваши переменные окружения
-├── history.json             # Файл истории (создаётся автоматически)
-├── README.md                # Этот файл
+│       ├── openai_service.py     # Работа с OpenAI API
+│       ├── parser_service.py     # Парсинг сайтов (Selenium)
+│       └── history_service.py    # История запросов
+├── frontend/                 # Веб-интерфейс
+│   ├── index.html            # Главная страница
+│   ├── styles.css            # Стили
+│   └── app.js                # JS логика
+├── desktop/                  # Desktop-приложение (PyQt6)
+│   ├── build.py              # Исходный код desktop GUI
+│   ├── requirements.txt      # Зависимости desktop-версии
+│   ├── venv/                 # Виртуальное окружение desktop
+│   └── dist/
+│       └── build.exe         # Собранный .exe-файл для Windows
+├── requirements.txt          # Зависимости backend/web
+├── env.example.txt           # Пример .env
+├── .env                      # Ваши переменные окружения
+├── history.json              # История запросов (автоматически)
+├── README.md                 # Документация
 ```
 
 ## 🔧 Функциональность
